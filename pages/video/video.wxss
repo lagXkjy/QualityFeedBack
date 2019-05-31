@@ -1,0 +1,26 @@
+/* pages/video/video.wxss */
+.video-mask{
+  /* padding-top: 200rpx; */
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+.close-video{
+  position: fixed;
+  width:50rpx;
+  line-height: 50rpx;
+  text-align: right;
+  font-size: 40rpx;
+  text-align: center;
+  border-radius:50%;
+  background: #fff;
+  color: red;
+  right:30rpx;  
+  top:150rpx;
+}
+.prevideo{
+  width: 100%;
+  height: 100%;
+}

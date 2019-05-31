@@ -1,0 +1,33 @@
+/* pages/successTips/index.wxss */
+
+page {
+  background-color: #fff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.img-wrap {
+  text-align: center;
+  padding-top: 180rpx;
+}
+
+.img-wrap>image {
+  width: 200px;
+  height: 175rpx;
+}
+
+.success {
+  padding-top: 55rpx;
+  padding-bottom: 35rpx;
+  font-size: 42rpx;
+  font-weight: bold;
+  color: #2b2b2b;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.submit {
+  font-size: 30rpx;
+  color: #4c4c4c;
+}

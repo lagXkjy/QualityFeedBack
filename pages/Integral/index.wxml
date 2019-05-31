@@ -1,0 +1,30 @@
+<view  class='top flex border-b-1 center white-bg between'>
+  <view class='flex fon-30  center'>
+      <image mode='widthFix' class='img' src='../../images/tops_03.png'></image>
+    <view class='c17'>我的积分({{integral}})</view>
+  </view>
+</view>
+
+<view class='margin-t-20  border-b-1'>
+  <!-- <view class='flex border-t-1 bg-fff mmid center between'>
+    <view>
+      <view class='fon-30 margin-b-10 c17'>反馈被采用</view>
+      <view class='fon-28 c9f'>2018-02-11 11:25:54</view>
+    </view>
+    <view class='fon-42 blue'>+50</view>
+  </view> -->
+
+    <view class='flex border-t-1 bg-fff mmid center between'
+    wx:for='{{integralData}}' 
+    wx:key="i" 
+    hidden='{{!integralData[0].Apply}}'
+    >
+    <view>
+      <view class='fon-30 margin-b-10 c17'>{{item.Rem}}</view>
+      <!--时间  -->
+      <view class='fon-28 c9f'>{{item.Apply}}</view>
+    </view>
+    <view class='fon-42 blue'>+{{item.integral}}</view>
+  </view>
+  <view class='white-bg t-center pad-tb-50 c-gray' hidden='{{integralData[0].Apply}}'>没有数据 !</view>
+</view>

@@ -1,0 +1,12 @@
+<!--pages/successTips/index.wxml-->
+<view class='img-wrap'>
+    <image src='./upload_success.jpg'></image>
+</view>
+<view>
+    <view class='text-center success'>
+        <text class=''>上传成功!</text>
+    </view>
+    <view class='text-center'>
+        <text class='submit'>上传视频成功，此次质保申请已经提交</text>
+    </view>
+</view>

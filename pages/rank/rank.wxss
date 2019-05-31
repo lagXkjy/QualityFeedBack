@@ -1,0 +1,111 @@
+/* pages/rank/rank.wxss */
+/* pages/Quality/index.wxss */
+.top{
+  padding-right: 20rpx;
+}
+.jian{
+  width: 20rpx;
+}
+.bumen{
+  padding-left: 20rpx;
+  width: 132rpx;
+  height: 100rpx;
+}
+.xia{
+  width: 28rpx;
+}
+.select{
+  width: 200rpx;
+  height: 58rpx;
+  padding:0 20rpx;
+  border:1rpx solid #e3e3e3;
+}
+.yali{
+  margin: 0 10rpx;
+}
+.textarea{
+ width: 575rpx;
+}
+.slos{
+  padding:20rpx 0;
+}
+.jianPi{
+  width: 80rpx;
+}
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  background-color: #0099cc;
+  color: #fff;
+  font-size: 32rpx;
+}
+.mar-r-20{
+    margin-right: 20rpx;
+}
+.pad-34{
+    padding-top: 34rpx;
+    padding-bottom: 10rpx;
+}
+.video{
+    width: 200rpx;
+    height: 250rpx;
+    /* margin: 20rpx 0; */
+}
+.imgs-show{
+  height: 80rpx;
+}
+.wid-590{
+  width: 590rpx;
+}
+.gang{
+  height: 0rpx;
+  background: #0099cc;
+  margin-top: 30rpx;
+}
+.bg-white{
+  background: white
+}
+.font-35{
+  font-size:35rpx;
+}
+.font-30{
+  font-size:30rpx;
+}
+.font-26{
+  font-size:26rpx;
+}
+.flex1-5{
+  flex: 1.5;
+}
+.flex-5{
+  flex: 0.5;
+}
+.pad-tb-item{
+  padding: 25rpx 0;
+}
+.container{
+  width:100%;
+  height: 100%;
+  overflow: hidden;
+  margin-top: 110rpx;
+}
+.switchwrap{
+  width: 100%;
+   position: fixed;
+  top:0;
+  line-height: 100rpx; 
+  background: #fff;
+  border-bottom:4rpx solid #fff;
+}
+.active{
+  border-bottom:4rpx solid #0099cc;
+}
+.lin-500{
+  line-height: 500rpx;
+  width: 100%;
+}

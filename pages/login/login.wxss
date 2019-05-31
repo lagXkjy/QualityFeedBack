@@ -1,0 +1,73 @@
+/* pages/login/login.wxss */
+page{
+  background-color: #fff;
+
+}
+.img-top{
+  width: 361rpx;
+  margin-top: 85rpx;
+  margin-bottom: 80rpx;
+}
+.zhiy{
+  padding:0 83rpx;
+}
+.img-ren{
+  width: 30rpx;
+  margin-right: 25rpx;
+  margin-left: 10rpx;
+}
+.detiao{
+  height: 100rpx;
+  border-bottom: 1px solid #e5e5e5;
+ 
+}
+.dsa{
+  border-top: 2px solid #0c9dce;
+  height: 3rpx;
+  margin-top: 100rpx;
+  border-bottom: 1rpx solid #0c9dce;
+}
+.blue{
+  color: #1c8ac0;
+}
+.pl{
+  font-size: 30rpx;
+}
+.inpout{
+  font-size: 30rpx;
+}
+.wangji{
+  text-align: right;
+  height: 75rpx;
+  line-height: 75rpx;
+  color: #595757;
+}
+.btn{
+  display: inline-block;
+  width: 100%;
+  margin:80rpx auto;
+  margin-bottom: 0;
+  height: 90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  color: #fff;
+  background-color: #1c8ac0;
+  font-size: 37rpx;
+  border: 0;
+}
+.btn2{
+  margin:0 auto;
+  background-color: #fff;
+  color: #c4a46b;
+  font-size: 30rpx;
+}
+.btn,.btn2::after{
+  border: 0;
+}
+.ma{
+  height: 100%;
+  width: 180rpx;
+  color: #0c9dce;
+  font-family: "黑体";
+  text-align:center;
+}

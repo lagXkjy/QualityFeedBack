@@ -1,0 +1,21 @@
+<!--pages/rank/rank.wxml-->
+<view class='flex t-center v-center switchwrap'>
+  <view bindtap='switch' data-id="1" class='flex1 switch {{tab == 1? "active":""}}'>阿特拉斯科普柯</view>
+  <view bindtap='switch' data-id="0" class='flex1 switch {{tab == 0? "active":""}}'>代理商</view>
+</view>
+<view class='container bg-white'>
+  <view class='flex t-center border-b-1 font-35'>
+    <view class='flex1-5 pad-tb-item'>公司</view>
+    <view class='flex1 pad-tb-item'>工程师</view>
+    <view class='flex1 pad-tb-item'>积分</view>
+    <view class='flex-5 pad-tb-item'>排名</view>
+  </view>
+  <view class='flex t-center center border-b-1 font-30' wx:for="{{rankingData}}" wx:key="index">
+    <view class='flex1-5 pad-tb-item'>{{item.CorporateName}}</view>
+    <view class='flex1 pad-tb-item'>{{item.EngineerName}}</view>
+    <view class='flex1 pad-tb-item'>{{item.Integral}}</view>
+    <view class='flex-5 pad-tb-item'>{{item.Ranking}}</view>
+  </view>
+  
+</view>
+<view class='t-center bg-white lin-500 c9f' hidden='{{rankingData.length ? true:false}}'>没有数据</view>

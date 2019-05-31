@@ -1,0 +1,14 @@
+<!--pages/uploadSuccess/index.wxml-->
+<view  class='top flex border-b-1 center white-bg between'>
+  <view class='flex fon-28  center'>
+    <view class='c9f center flex bumen'>客户名称</view>
+    <view>广州番禹建业进出口贸易有限公司</view>
+  </view>
+</view>
+<view  class='top flex border-b-1 center white-bg between'>
+  <view class='flex fon-28  center'>
+    <view class='c9f center flex bumen'>上传视频</view>
+    <view>请上传视频</view>
+  </view>
+  <image class='jian' mode='widthFix' src='../../images/rig_06.png'></image>
+</view>

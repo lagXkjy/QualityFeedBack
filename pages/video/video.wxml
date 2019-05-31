@@ -1,0 +1,9 @@
+<!--pages/video/video.wxml-->
+<view class='video-mask'>
+<!-- <view class='close-video' bindtap='navToQuality'>X</view> -->
+    <video src='{{video}}'
+    class='prevideo'
+    mode='widthFix'
+    custom-cache='{{false}}'
+    ></video>
+</view>

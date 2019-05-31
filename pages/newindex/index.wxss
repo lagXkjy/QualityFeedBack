@@ -1,0 +1,45 @@
+/* pages/newindex/index.wxss */
+.img{
+  width: 154rpx;
+  height: 154rpx;
+  border-radius: 50%;
+}
+.mingZi{
+  font-size: 44rpx;
+}
+.avatar-center{
+  width: 150rpx;
+  height: 150rpx;
+  margin: 15rpx auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.avatarUrl{
+  display: inline-block;
+  width: 100%;
+}
+.outer{
+text-align: center;
+background-color: #fff;
+padding: 48rpx;
+border-bottom: 1px solid #e3e3e3;
+margin-bottom: 20rpx;
+}
+.icons{
+  width: 32rpx;
+  margin-right: 20rpx;
+}
+
+.top{
+  font-size: 30rpx;
+  color: #171717;
+  padding:0 50rpx;
+  height: 90rpx;
+  border-bottom: 1px solid #e3e3e3;
+}
+.jian{
+  width: 20rpx;
+}
+.border-t-1{
+  border-top: 1px solid #e3e3e3;
+}

@@ -1,0 +1,53 @@
+                    
+<view class='wrapper'>
+
+  <view class='fixed top-bar'>
+  <view class="navbar border-t-1">
+  <view wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}
+  </view>
+</view>
+</view>
+ <view class='white-bg t-center pad-tb-50 c-gray' hidden='{{feedBackData[currentTab][0].Apply}}'>没有数据 !</view> 
+<view class='feedback' wx:for="{{feedBackData[currentTab]}}" wx:key="" wx:for-index="index">
+  <view wx:if="{{currentTab==0}}" class='top margin-t-20 border-t-1 border-b-1 bg-f9 flex fon-26 f9f9f9 c8 between'>
+    <view>待确认</view>
+    <!--时间  -->
+    <view>{{item.Apply}}</view>
+  </view>
+
+  <view wx:if="{{currentTab==1}}" class='top margin-t-20 border-t-1 border-b-1 bg-f9 flex fon-26 f9f9f9 c8 between'>
+    <view>已采用 </view>
+    <view>{{item.Apply}}</view>
+  </view>
+
+    <view 
+    wx:if="{{currentTab==2}}" 
+    class='top margin-t-20 border-t-1 border-b-1 bg-f9 flex fon-26 f9f9f9 c8 between'
+    >
+    <view>未采用 </view>
+    <view>{{item.Apply}}</view>
+  </view>
+  
+  <view class='middle bg-fff'>
+    <view class='fon-30 margin-b-10'>{{item.department}}</view>  
+    <view class='fon-26 c8 margin-b-10'>机型：{{item.MachineType}}  序列号：{{item.MachineNum}}</view>
+    <view class='fon-26 c8'>描述： {{item.Details}}   </view>
+  </view>
+<!--待确认  -->
+  <view wx:if="{{currentTab==0}}"  class='waitDatas flex dibu bg-fff border-t-1 border-b-1 center f-right'>
+    <view class='white kuandu bg-blue fon-26' bindtap='goToMy' data-index="{{index}}" data-currentTab='{{currentTab}}' data-id='{{item.Id}}'>查看</view>
+  </view>
+<!--已采用  -->
+    <view wx:if="{{currentTab==1}}" class='flex dibu bg-fff border-t-1 border-b-1 center between'>
+    <view class='fon-26 c8 flex center'><text class='red fon-42'>·</text> 已获得{{item.Integral}}积分</view>
+    <view class='white kuandu bg-blue fon-26' bindtap='goToMy' data-index="{{index}}" data-currentTab='{{currentTab}}' data-id='{{item.Id}}'>查看</view>
+  </view>
+<!--未采用  -->
+  <view wx:if="{{currentTab==2}}" class='flex dibu bg-fff border-t-1 border-b-1 center f-right'>
+    <view class='white kuandu bg-blue fon-26' bindtap='goToMy' data-index="{{index}}" data-currentTab='{{currentTab}}' data-id='{{item.Id}}'>查看</view>
+  </view>
+</view>
+
+
+
+</view>

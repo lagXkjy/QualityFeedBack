@@ -1,0 +1,257 @@
+<view class='wrapper'>
+<view style=''>
+<!--手机号  -->
+<!-- <view hidden='{{!showPhoneInp}}'>
+  <view hidden='{{}}'  class='top flex border-b-1 between white-bg center'>
+    <view class='flex fon-28  center'>
+      <view class='c9f center flex bumen'>手机号</view>
+      <input placeholder-class='c17' placeholder='请输入手机号' bindinput='phoneInp' type='number'></input>
+    </view>
+    <view class='center'>
+      <button 
+      hidden='{{!show}}' 
+      size='mini' 
+      class='btn-verify' 
+      bindtap="getUserInfo"
+      type='number'
+      >获取验证码</button>
+      <view hidden='{{show}}'>{{time}}s</view>
+    </view>
+  </view>
+  <!--验证码  -->
+  <!-- <view  class='top flex border-b-1 center white-bg between'>
+    <view class='flex fon-28  center'>
+      <view class='c9f center flex bumen'>验证码</view>
+      <input placeholder-class='c17' placeholder='' bindinput='verifyInp'></input>
+    </view>
+  </view>
+</view> -->
+<!--品牌  -->
+<!-- <view  class='top flex border-b-1 center white-bg between'>
+  <view class='flex fon-28  center'>
+      <view class='c9f center flex bumen'>品牌</view>
+      <view class=' flex center between '>
+        <text wx:if="{{brandNotChecked}}">{{brand}}</text>
+      </view>
+  </view>
+</view> -->
+<!-- <view  class='top flex border-b-1 center white-bg between'>
+  <view class='flex fon-28  center'>
+      <view class='c9f center flex bumen'>品牌</view>
+      <view class='select-big flex center between'>
+        <picker 
+        bindchange="bindPickerBrand" 
+        value="{{brandIndex}}" 
+        range="{{brand}}" 
+        range-key='Rem'
+        class='c17 flex1 fon-28'
+        >
+        <text wx:if="{{brandNotChecked}}">请选择</text>
+        {{brand[brandIndex].name}}
+        </picker>
+        <image class='xia' mode='widthFix' src='../../images/jianXia_03.png'></image>
+      </view>
+  </view>
+</view> -->
+
+<!--部门  -->
+<!-- <picker 
+bindchange="bindPickerDepartment" 
+value="{{depIndex}}" 
+range="{{department}}" 
+range-key='Name'
+class='c17 flex1 fon-28'
+> -->
+<view hidden=''  class='top flex border-b-1 center white-bg between' bindtap='bindDepartment' data-picker='department'>
+  <view class='flex fon-28  center'>
+      <view class='c9f center flex bumen'>部门</view>
+      <view class='flex center between'>
+        <text wx:if="{{depIndex == null}}">请选择</text>{{department[depIndex].Name}}
+      </view>
+  </view>
+  <image class='jian' mode='widthFix' src='../../images/rig_06.png'></image>
+</view>
+<!-- </picker> -->
+
+<!--机型压力  -->
+<view  class='top fon-28  flex border-b-1 center white-bg between'  bindtap='bindTypes' data-picker='types'>
+  <view class='flex  center'>
+    <view class='c9f center flex bumen'>机型</view>
+  </view>
+  <view class='flex1 center between flex'>
+    <view class='select-big flex center between'>
+      <!-- <picker 
+      bindchange="bindPickerTypes" 
+      value="{{typeIndex}}" 
+      range="{{types}}" 
+      range-key='Type'
+      class='c17 flex1 fon-28'
+      > -->
+      <text wx:if="{{typeIndex == null}}">请选择 </text>
+      {{types[typeIndex].Type}}
+      <!-- </picker> -->
+      <image class='xia' mode='widthFix' src='../../images/jianXia_03.png'></image>
+    </view>
+    <!-- <view class='c9f '> 压力</view>  
+     <view class='picker select flex center between '>
+      <picker 
+      bindchange="bindPickerPress" 
+      value="{{pressIndex}}" 
+      range="{{press}}" 
+      class='c17 flex1 fon-28  picker-inline'>
+      <text wx:if="{{pressIndex == null}}">请选择 </text>
+      {{press[pressIndex]}}
+      </picker>
+      <image class='xia' mode='widthFix' src='../../images/jianXia_03.png'></image>
+    </view> -->
+  </view>
+</view>
+
+
+<view  class='top flex border-b-1 center white-bg between'>
+  <view class='flex fon-28  center'>
+    <view class='c9f center flex bumen'>序列号</view>
+    <input placeholder-class='c17' placeholder='请输入序列号' bindblur='serialblur' bindinput='serialNumInp'   value='{{serialNum}}'></input>
+  </view>
+</view>
+<!--故障类别选择  -->
+ <!-- <picker
+bindchange="bindPickerBigTrouble"
+range="{{troublesBigPick}}"
+value="{{bigIndex}}"
+range-key='Rem'
+> -->
+    <view  class='top flex border-b-1 center white-bg between' bindtap='bindTroublesBigPick'>
+    <view class='flex fon-28  center'>
+        <view class='c9f center flex bumen'>故障大类</view>
+        <text wx:if="{{bigIndex == null}}">请选择</text>
+        {{troublesBigPick[bigIndex].Rem}}
+    </view>
+    <image class='jian' mode='widthFix' src='../../images/rig_06.png'></image>
+    </view>
+<!-- </picker> -->
+
+<!-- <picker
+bindchange="bindPickerLitTrouble"
+range="{{troublesLitPick}}"
+range-key='Rem'
+value="{{litIndex}}"
+> -->
+<view  class='top flex border-b-1 center white-bg between' bindtap='bindTroublesLitPick'>
+  <view class='flex fon-28  center'>
+    <view class='c9f center flex bumen'>故障小类</view>
+    <text wx:if="{{litIndex == null}}">请选择 </text>
+    {{troublesLitPick[litIndex].Rem}}
+  </view>
+  <image class='jian' mode='widthFix' src='../../images/rig_06.png'></image>
+</view>
+<!-- </picker>  -->
+
+
+<!--故障处理  -->
+ <!-- <picker
+bindchange="bindPickerTroubleShooting"
+range="{{troublesShooting}}"
+value="{{shoIndex}}"
+range-key='FaultHandle'
+> -->
+    <view  class='top flex border-b-1 center white-bg between' bindtap='bindTroublesShooting'>
+      <view class='flex fon-28  center wei-500'>
+          <view class='c9f center flex bumen'>故障处理</view>
+          <text wx:if="{{shoIndex == null}}">请选择</text><text class='limit-text'>{{troublesShooting[shoIndex].FaultHandle}}</text>
+      </view>
+      <image class='jian' mode='widthFix' src='../../images/rig_06.png'></image>
+    </view>
+<!-- </picker> -->
+
+<view  class='top flex border-b-1 center white-bg between'>
+  <view class='flex fon-28  center wid100'>
+    <view class='c9f center flex bumen'>故障描述</view>
+    <view style='width:75%;'>
+    <input  placeholder-class='c17' style='width:100%' placeholder='请输入故障描述'  bindinput='problemInp'   value='{{problem}}'></input>
+    </view>
+    
+  </view>
+</view>
+<!--相关照片  -->
+<view  class='top flex  center white-bg between'
+bindtap='uploadImage'
+>
+  <view class='flex fon-28  center'>
+    <view class='c9f center flex bumen'>相关照片</view>
+    <view class='c17'>
+        <text wx:if="{{!showImgs.length}}">(必须有一张铭牌照片)</text>
+        <text wx:else>重新选择图片</text>
+    </view>
+  </view>
+  <image class='jianPi' mode='widthFix' src='../../images/jia_07.png'></image>
+</view>
+<!-- 图片展示 -->
+<view class='white-bg border-b-1'>
+  <view wx:for='{{showImgs}}' wx:key="index" class='inline-block wid-100 '>
+    <view class='del-btn' bindtap='delImg' data-index='{{index}}'>X</view>
+    <image class='show-img' src='{{item}}' mode='aspectFit' bindtap='preImage' data-path="{{item}}"></image>
+  </view>
+</view>
+<!--视频上传  -->
+<view class='top flex border-b-1 center white-bg between'               bindtap='uploadAudio'
+>
+  <view class='flex fon-28  center' >
+    <view class='c9f center flex bumen'>上传视频</view>
+    <view class='c17' >
+        <text wx:if="{{!video}}">(非必选项)</text>
+        <text wx:else>重新选择视频</text>
+    </view>
+  </view>
+  <image class='jianPi' mode='widthFix' src='../../images/jia_07.png'></image>
+</view>
+</view>
+<view hidden='{{video == ""}}'  class='top flex border-b-1 white-bg between pad-34' style='padding:20rpx 0;'>
+  <view class='flex fon-28 center'>
+    <view class='c9f flex bumen'>视频展示</view>
+    <!-- <image class='jianPi' mode='widthFix' src='../../images/jia_07.png'></image> -->
+    <view class='relative'>
+      <view class='del-video-btn' bindtap='delVideo'>X</view>
+      <!-- <video 
+      style='width:200rpx;height:240rpx' 
+      src='{{preVideo}}' 
+      class='video' 
+      mode='acspectFill' 
+      webkit-playsinline="true" 
+      x-webkit-airplay="true"
+      playsinline="true"
+      show-fullscreen-btn="false"
+      object-fit="fill"
+      ></video>{{thumbTempFilePath}} -->
+      <image src='../../images/shipin.jpg' style='width:200rpx'  mode='widthFix'
+      class='video' bindtap='navToVideo'></image>
+    </view>
+  </view>
+</view>
+<view class='empty'></view>
+ <view class='mar-b-50'></view>
+<view class='mar-b-50'></view> 
+<!-- <view class='footer' bindtap='submitAll'>提交</view>  -->
+<view  class='top flex border-b-1 white-bg between fix-footer z-1000'>
+    <!-- <view class=' center flex btn-save' bindtap='saveMsg'>保存</view> -->
+    <view class=' center flex btn-submit' bindtap='submitMsg'>提交</view>
+</view>
+
+
+  <view wx:if="{{chooses.length}}"  style='width:100%;height:100vh;background:#fff;position:fixed;z-index:1000;top:0rpx;overflow-y:scroll'>
+    <view wx:for="{{chooses}}" wx:key="index">
+      
+        <view class='top flex border-b-1 center white-bg between'>
+          <view
+          bindtap='chooseItem' 
+          data-picker="{{picker}}" 
+          data-index='{{index}}'
+          class='flex fon-28 center hei-100 pad-l-20 item-full'>
+            {{item.Name}}{{item.Type}}{{item.Rem}}{{item.FaultHandle}}
+          </view>
+          <image class='jian' mode='widthFix' src='../../images/rig_06.png'></image>
+        </view>
+      
+    </view>
+  </view>
+</view>

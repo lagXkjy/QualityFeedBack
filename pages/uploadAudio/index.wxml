@@ -1,0 +1,19 @@
+<!--pages/uploadAudio/index.wxml-->
+<view  class='top flex border-b-1 center white-bg between'>
+  <view class='flex fon-28  center'>
+    <view class='c9f center flex bumen'>客户名称</view>
+    <view>广州番禹建业进出口贸易有限公司</view>
+  </view>
+</view>
+<view
+bindtap='uploadAudio'
+class='top flex border-b-1 center white-bg between'>
+  <view class='flex fon-28  center'>
+    <view class='c9f center flex bumen'>上传视频</view>
+    <view>
+        <text wx:if="{{!audioChoosed}}">请上传视频</text>
+        <text wx:else>重新选择视频</text>
+    </view>
+  </view>
+  <image class='jian' mode='widthFix' src='../../images/rig_06.png'></image>
+</view>

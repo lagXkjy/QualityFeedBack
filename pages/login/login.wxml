@@ -1,0 +1,33 @@
+<!--pages/login/login.wxml-->
+<view>
+
+  <view class=' zhiy '>
+  <view class='dsa'></view>
+    <view class='flex detiao center between'>
+      <view class=' flex center'>
+
+        <input type='number' class='inpout' name="phone" placeholder-class='pl' bindinput='phoneInp' placeholder='手机号' class='flex1'></input>
+      </view>
+      <view hidden="{{!show}}" bindtap='HuoQuma' class='pl flex blue center ma'>获取验证码</view>
+      <view hidden="{{show}}" class='pl flex b-center center ma'>{{time}}s</view>
+    </view>
+    <view class='flex detiao center'>
+
+      <input 
+      type='number' 
+      class='inpout' 
+      name="verify" 
+      placeholder-class='pl' 
+      placeholder='手机验证码' 
+      class='flex1'
+      bindinput='verifyInp'
+      ></input>
+    </view>
+
+
+    <button class='btn' open-type='getUserInfo' bindgetuserinfo="getUserInfo"
+     >提交认证</button>
+
+  </view>
+</view>
+<loading hidden="{{hidden}}">请稍后</loading>

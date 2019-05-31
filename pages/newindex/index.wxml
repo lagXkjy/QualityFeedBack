@@ -1,0 +1,34 @@
+<view class='outer'>
+     <view class='avatar-center'>
+         <open-data class='avatarUrl' type="userAvatarUrl"></open-data>
+     </view>
+      <open-data class="mingZi" type="userNickName" lang="zh_CN"></open-data>
+      <!-- <image class='img' mode='widthFix' src='{{avatarUrl}}'></image>
+      <view class='mingZi'>{{nickName}}</view> -->
+</view>
+<!-- 
+<view bindtap='JiLu' class='top flex border-t-1 center white-bg between'>
+  <view class='flex center'>
+    <image mode='widthFix' class='icons' src='../../images/tops_03.png'></image>
+    我的积分 <text wx:if='{{integral !== null}}'>({{integral}})</text>
+  </view>
+  <image class='jian' mode='widthFix' src='../../images/rig_06.png'></image>
+</view> -->
+
+<view bindtap='pian' class='top flex center white-bg between'>
+  <view class='flex center'>
+    <image mode='widthFix' class='icons' src='../../images/xie_06.png'></image>
+    我的反馈
+  </view>
+  <image class='jian' mode='widthFix' src='../../images/rig_06.png'></image>
+</view>
+<!-- <view bindtap='toRank' class='top flex center white-bg between'>
+  <view class='flex center'>
+    <image mode='widthFix' class='icons' src='../../images/tops_03.png'></image>
+   积分排名
+  </view>
+  <image class='jian' mode='widthFix' src='../../images/rig_06.png'></image>
+</view> -->
+
+
+

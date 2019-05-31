@@ -1,0 +1,87 @@
+<view  class='top flex border-b-1 center white-bg between'>
+  <view class='flex fon-28  center'>
+    <view class='c9f center flex bumen'>申请时间</view>
+    <view class='c17'>{{detailData.Apply}}</view>
+  </view>
+</view>
+
+<view  class='top flex border-b-1 center white-bg between'>
+  <view class='flex fon-28  center'>
+    <view class='c9f center flex bumen'>部门</view>
+    <view class='c17'>{{detailData.DivSion}}</view>
+  </view>
+</view>
+
+<view  class='top flex border-b-1 center white-bg between'>
+  <view class='flex fon-28  center'>
+    <view class='c9f center flex bumen'>机型</view>
+    <view class='c17'>{{detailData.MachineType}}</view>
+  </view>
+</view>
+
+
+<view  class='top flex border-b-1 center white-bg between'>
+  <view class='flex fon-28  center'>
+    <view class='c9f center flex bumen'>序列号</view>
+    <view class='c17'>{{detailData.MachineNum}}</view>
+  </view>
+</view>
+<view  class='top flex border-b-1  white-bg between'>
+  <view class='flex fon-28 slos pad-r-20'>
+    <view class='c9f  flex bumen'>描述</view>
+   <view class='textarea' >{{detailData.Details}}</view>
+  </view>
+</view>
+
+
+<view  class='top flex border-b-1 center white-bg between'>
+  <view class='flex fon-28  center'>
+    <view class='c9f center flex bumen'>故障大类</view>
+    <view class='c17'>{{detailData.FailurePart}}</view>
+  </view>
+</view>
+
+<view  class='top flex border-b-1 center white-bg between'>
+  <view class='flex fon-28  center'>
+    <view class='c9f center flex bumen'>故障小类</view>
+    <view class='c17'>{{detailData.FailureShortDescription}}</view>
+  </view>
+</view>
+<view  class='top flex border-b-1  white-bg between'>
+  <view class='flex fon-28 slos pad-r-20'>
+    <view class='c9f  flex bumen'>故障描述</view>
+   <view class='textarea' >{{detailData.FailureDescribe}}</view>
+  </view>
+</view>
+
+
+<view  class='top flex border-b-1 white-bg between pad-34'>
+  <view class='flex fon-28 '>
+    <view class='c9f bumen flex'>上传照片</view>
+    <view class='wid-590'>
+        <block wx:for='{{detailData.img}}' wx:key=''>
+          <image bindtap='prewImg' data-src="{{item}}" class='jianPi mar-r-20 imgs-show' mode='aspectFit' src='{{item}}'></image>
+        </block>
+    </view>
+    
+  </view>
+</view>
+
+
+<view hidden='{{!detailData.Video}}'  class='top flex border-b-1 white-bg between pad-34'>
+  <view  class='flex fon-28 '>
+    <view class='c9f flex bumen '>上传视频</view>
+    <!-- <image class='jianPi' mode='widthFix' src='../../images/jia_07.png'></image> -->
+    <video
+    controls="false"
+    webkit-playsinline="true"
+    x-webkit-airplay="true"
+    playsinline="true"
+    show-fullscreen-btn="false"
+    object-fit="fill"
+     src='{{detailData.Video}}' class='video'  hidden='{{video==""}}' controls='false'></video>
+  </view>
+</view>
+
+
+
