@@ -1,18 +1,18 @@
 {
   "pages": [
-      "pages/login/login",
-      "pages/rank/rank",
-      "pages/video/video",
-      "pages/newindex/index",
-      "pages/getOpenId/index",
-      "pages/uploadAudio/index",
-      "pages/successTips/index",
-      "pages/My/index",
-      "pages/Quality/index",
-      "pages/feedback/index",
-      "pages/Integral/index",
-      "pages/picker/picker",
-      "pages/index/index"
+    "pages/login/login",
+    "pages/rank/rank",
+    "pages/video/video",
+    "pages/newindex/index",
+    "pages/getOpenId/index",
+    "pages/uploadAudio/index",
+    "pages/successTips/index",
+    "pages/My/index",
+    "pages/Quality/index",
+    "pages/feedback/index",
+    "pages/Integral/index",
+    "pages/picker/picker",
+    "pages/index/index"
   ],
   "window": {
     "backgroundColor": "#000",
@@ -22,30 +22,30 @@
     "navigationBarTextStyle": "white",
     "deviceOrientation": "landscape"
   },
-    "tabBar": {
-      "color": "#99999b",
-      "selectedColor": "#0c9dce",
-      "backgroundColor": "#fff",
-      "borderStyle": "black",
-      "list": [
-        {
-          "pagePath": "pages/Quality/index",
-          "text": "质量反馈",
-          "iconPath": "images/zhi_09.png",
-          "selectedIconPath": "images/zhis_09.png"
-        },
-        {
-          "pagePath": "pages/newindex/index",
-          "text": "我",
-          "iconPath": "images/me_09.png",
-          "selectedIconPath": "images/mes_09.png"
-        }
-      ]
-    },
-     "permission": {
-      "scope.userLocation": {
-        "desc": "小程序获取您的位置，用于更好的为您提供服务"
+  "tabBar": {
+    "color": "#99999b",
+    "selectedColor": "#0c9dce",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/Quality/index",
+        "text": "质量反馈",
+        "iconPath": "images/zhi_09.png",
+        "selectedIconPath": "images/zhis_09.png"
+      },
+      {
+        "pagePath": "pages/newindex/index",
+        "text": "我",
+        "iconPath": "images/me_09.png",
+        "selectedIconPath": "images/mes_09.png"
       }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "小程序获取您的位置，用于更好的为您提供服务"
     }
-    
+  },
+  "sitemapLocation": "sitemap.json"
 }

@@ -7,6 +7,6 @@
         <text class=''>上传成功!</text>
     </view>
     <view class='text-center'>
-        <text class='submit'>上传视频成功，此次质保申请已经提交</text>
+        <text class='submit'>上传成功，此次质量反馈已经提交</text>
     </view>
 </view>
